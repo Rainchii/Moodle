@@ -1,0 +1,21 @@
+body{
+	padding: 20px;
+	margin: 0px;
+	background-color: silver;
+	font-family: arial;
+
+}
+.miFormUsuarios label{
+	width: 150px;
+	text-align: right;
+}
+.miFormUsuarios select{
+	height: 36px;
+}
+.miFormUsuarios{
+	width: 80%;
+	margin: 0 auto;
+}
+.errorlist li{
+	color:red !important;
+}

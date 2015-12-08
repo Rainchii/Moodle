@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calificar</title>
+	
+</head>
+<body>
+	<div class="contenedor">
+		<div class="container">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="panel-title text-center">Nueva Calificacion</h2>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<form method="POST" class="form-horizontal miFormUsuarios">
+						{% csrf_token %}
+			        	{{ form.as_p }}
+			        	<div class="row">
+				        	<div class="col-md-12 center">
+				        		<input class="btn btn-success" type="submit" value="Guardar" />
+								<button class="btn btn-warning" type="button">Cancelar</button>
+								<input type="hidden" name="id" value="{{id}}">
+				        	</div>
+			        	</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

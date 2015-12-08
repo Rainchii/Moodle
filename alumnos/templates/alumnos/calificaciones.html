@@ -1,0 +1,10 @@
+<div>
+	<h1> CALIFICACIONES  </h1>
+	<button onclick="window.location='{% url "listar" %}'">Regresar</button>
+	{% for calificacion in calificaciones %}
+		<h3>{{calificacion}}</h3>
+	
+		<br>
+		<hr>
+	{% endfor %}
+</div>	

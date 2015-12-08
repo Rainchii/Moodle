@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Examenes Disponibles</title>
+	</head>
+	<body>
+		<h1 id="titulo">{{title}}</h1>
+	{% for examen in examenes  %}
+	<h4>{{examen}}</h4>
+	<form method="POST" action="contestar_examen" >
+		{% csrf_token %}
+		<input type="hidden" name="id" value="{{examen.id}}">
+		<input type="submit" value="Contestar Examen">
+	</form>
+	<br>
+{% endfor %}
+</body>
+</html>

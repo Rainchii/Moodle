@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Examen {{titulo}}</title>
+	</head>
+	<body>
+		<h1 id="titulo">Examen {{titulo}}</h1>
+	
+   <form action="revisar_examen" method="POST">
+	{% csrf_token %}
+	{{ form.as_p }}
+			<input type="hidden" name="id" value="{{id}}">
+			<input type="submit" value="Guardar">
+		</form>
+</body>
+</html>

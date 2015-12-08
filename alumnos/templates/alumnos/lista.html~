@@ -1,0 +1,20 @@
+<div>
+	<h1> LISTA DE ALUMNOS  </h1>
+	{% for alumno in alumnos %}
+		<h3>{{alumno.first_name}} {{alumno.last_name}}</h3>
+		
+		<form method="POST" action="editar">
+			{% csrf_token %}
+			<input type="submit" value="editar" onclick="return confirm('Deseas editar el Alumno: {{alumno}}');">
+			<input type="hidden" name="idEditar" value="{{alumno.id}}">
+		</form>
+		<form method="POST" action="/alumnos/calificacion/">
+			{% csrf_token %}
+			<input type="submit" value="calificacion" onclick="return confirm('Deseas consultar la calificacion de: {{alumno}}');">
+			<input type="hidden" name="idCalificacion" value="{{alumno.id}}">
+		</form>
+			
+		<br>
+		<hr>
+	{% endfor %}
+</div>	
